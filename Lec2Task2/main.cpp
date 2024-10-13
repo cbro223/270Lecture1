@@ -7,7 +7,9 @@ int binarysearch(vector<int> &nums, int target_value, int ixlow, int ixhigh) {
     if (ixlow == ixhigh) return -1;
 
     int ixmid = (ixhigh + ixlow) /2;
+
     if (nums[ixmid] == target_value) return ixmid;
+
     if(nums[ixmid] < target_value) return binarysearch(nums, target_value, ixlow, ixmid -1);
     else return binarysearch(nums,target_value,ixmid + 1, ixhigh);
 }
